@@ -1,0 +1,26 @@
+The following variables are found in the file "GWAS_BINOMIAL_DSI.csv":
+
+Name: Genotype Name
+Mu_BI: Intercept or general mean for the proportion of bored internodes (BI) after the analysis of the phenotypic data (more details see Section 2.3 of the paper). The values are in the logit scale 
+Uhat_BI: The solution of the random effects for the genotype (term G_j(i) in section 2.3 of the paper) for BI. The values are in the logit scale.	
+BI: The BLUP for BI created as the general mean plus the uhat (Mu_BI + Uhat_BI)
+BI_ilink: The BLUP for BI in the original scale created as the back transformation of the logit (1 / (1+ exp(-BI)).
+Mu_Sind: Intercept or general mean for the proportion of insect survival (SInd) after the analysis of the phenotypic data (more details see Section 2.3 of the paper). The values are in the logit scale 
+Uhat_SInd: The solution of the random effects for the genotype (term G_j(i) in section 2.3 of the paper) for SInd. The values are in the logit scale.	
+Sind: The BLUP for SInd created as the general mean plus the uhat (Mu_SInd + Uhat_SInd)
+Sind_ilink: The BLUP for SInd in the original scale created as the back transformation of the logit (1 / (1+ exp(-SInd)).
+DSI_general_ilink: The Damage-Survival Index variable in the original scale, created as the average of BI_ilink and Sind_ilink
+DSI_Uhat_general: The Damage-Survival Index variable in the logit scale but for the Uhats. This was created as the average of Uhat_BI and Uhat_SInd
+DSI_BLUP_general: The BLUPs for the Damage-Survival Index variable in the logit scale. This was created as the average of BI and SInd
+Q1-Q2-Q3-Q4: The values for the DAPC (posterior probability of membership) for each genotype to each one of the subpopulations found in the 220 genotypes (more details see Section 2.5 of the paper)
+
+
+For the file "FENOTIPOS_GWAS_BINOMIAL_DSI.xlsx" there are 6 additional columns or variables:
+
+Eval_BI: The effect of the evaluation for BI in the model, the term E_i (more details see Section 2.3 in the paper)
+BLUP_BI: The BLUP estimated as Mu_BI + Eval_BI + Uhat_BI. This value is in the logit scale
+BLUP_BI_Ilink: The BLUP estimated as Mu_BI + Eval_BI + Uhat_BI. This value is in the original scale (1 / (1+ exp(-BLUP_BI)).
+Eval_Sind: The effect of the evaluation for SInd in the model, the term E_i (more details see Section 2.3 in the paper)
+BLUP_SInd: The BLUP estimated as Mu_SInd + Eval_SInd + Uhat_SInd. This value is in the logit scale
+BLUP_SInd_Ilink: The BLUP estimated as Mu_SInd + Eval_SInd + Uhat_SInd. This value is in the original scale (1 / (1+ exp(-BLUP_SInd)).
+
