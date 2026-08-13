@@ -1,0 +1,6 @@
+In this folder we can find the following files:
+
+1. GWAS_BLUP_DSI_121166_SNPs_4Q.RData: The results from the GWAS analysis using the GWAS poly for the BLUPs of the trait DS Index. This trait was computed as the average of the BLUPs of the BI and SInd. It is in the Logit scale
+2. QQPLOT_DSI_....: The QQ plots created for each genetic model for the DS Index trait.
+3. Population_Structure.tiff: The circular dendrogram of the DAPC or posterior probabilities of membership of each of the 519 genotypes to the 4 subpopulations.
+4. DAPC_object_12166_SNPs_519_Genotypes_23072026.RDataL: The results of running the populaitron structure using the ADEGENET Package.
